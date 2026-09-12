@@ -1,0 +1,108 @@
+:root {
+  color-scheme: dark;
+  --red: #e63946;
+  --blue: #457bff;
+  --bg: #111318;
+  --panel: #1b1e26;
+  --text: #f2f2f2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 16px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.scoreboard {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.team {
+  flex: 1;
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 24px 12px;
+}
+
+.team-name {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+
+.team-red .team-name { color: var(--red); }
+.team-blue .team-name { color: var(--blue); }
+
+.score {
+  font-size: clamp(4rem, 20vw, 9rem);
+  font-weight: 800;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.winner-banner {
+  font-size: clamp(1.5rem, 6vw, 3rem);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.winner-banner.red { color: var(--red); }
+.winner-banner.blue { color: var(--blue); }
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+  max-width: 700px;
+  justify-content: center;
+}
+
+.btn {
+  flex: 1 1 140px;
+  min-height: 96px;
+  border: none;
+  border-radius: 16px;
+  font-size: clamp(1.1rem, 4vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #fff;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: transform 0.05s ease, opacity 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn-red { background: var(--red); }
+.btn-blue { background: var(--blue); }
+.btn-reset { background: #3a3d46; }
+
+.btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+}
