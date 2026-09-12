@@ -6,6 +6,8 @@ we are making a basic website that can show a score, we have much bigger plans a
 
 A static scoreboard with Red/Blue/Reset buttons, first to 8 wins. No build step, no backend.
 
+**Live site:** https://abx-5t5.github.io/foosball/
+
 - **Run locally:** open `index.html` in a browser, or serve the folder (e.g. `npx serve`).
 - **Deploy:** push to `main` and enable GitHub Pages (Settings → Pages → Deploy from branch → `main` / root).
 
