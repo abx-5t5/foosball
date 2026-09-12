@@ -99,7 +99,7 @@ body {
 
 .btn-red { background: var(--red); }
 .btn-blue { background: var(--blue); }
-.btn-reset { background: #3a3d46; }
+.btn-reset { background: #ddda1a; }
 
 .btn:disabled {
   opacity: 0.35;
